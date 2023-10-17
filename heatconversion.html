@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeatConversion</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right top, skyblue, blue, pink);
+        min-height: 100vh;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .container {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40rem;
+        height: 25rem;
+        box-sizing: border-box;
+        border-radius: 20px;
+        border: 2px solid black;
+      }
+      h1,
+      h2 {
+        color: black;
+      }
+      #btn {
+        background-color: orangered;
+        border: 1px solid black;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        margin-bottom: 30px;
+        font-size: 18px;
+      }
+      #input {
+        width: 250px;
+        height: 30px;
+        padding: 2px;
+      }
+      #result {
+        width: 150px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Farenheit Conversion</h1>
+      <h2>Celsius to Farenheit Conversion</h2>
+      <div>
+        <input type="text" name="" id="input" />
+      </div>
+      <div>
+        <br />
+        <button id="btn" onclick="convert()">Convert</button>
+      </div>
+      <div id="result" class="style"></div>
+    </div>
+    <script src="farantocelsius.js"></script>
+  </body>
+</html>
