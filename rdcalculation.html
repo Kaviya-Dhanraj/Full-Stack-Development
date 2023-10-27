@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RD Calculation</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        min-width: 500px;
+        height: 470px;
+        padding: 20px;
+        letter-spacing: 1px;
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+      h2 {
+        text-align: center;
+        font-size: 40px;
+      }
+      label {
+        display: block;
+        margin: 10px 0;
+        font-size: 25px;
+      }
+      input {
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        padding: 5px;
+        border: 1px solid #ccc;
+      }
+      button {
+        margin-top: 20px;
+        background-color: rgb(27, 138, 202);
+        padding: 15px 15px;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: large;
+      }
+      #result {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>RD Calculator</h2>
+      <label for="principle">Principle Amount (₹):</label>
+      <input
+        type="text"
+        id="principle"
+        placeholder="Enter the Principle amount"
+      />
+      <label for="principle">Interest Rate (%):</label>
+      <input
+        type="text"
+        id="rate"
+        placeholder="Enter the annual interest rate"
+      />
+      <label for="principle">Time (months):</label>
+      <input type="text" id="time" placeholder="Enter the number of months" />
+      <button type="submit" onclick="calculate()">Calculate</button>
+      <div id="result"></div>
+    </div>
+    <script src="rdcalculation.js"></script>
+  </body>
+</html>
