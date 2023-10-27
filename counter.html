@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      #text_input {
+        width: 500px;
+        height: 125px;
+      }
+      p {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Text Counter</h1>
+      <textarea
+        name=""
+        id="text_input"
+        placeholder="Type Your Text here..."
+      ></textarea>
+      <p><span id="count">0</span> Characers</p>
+    </div>
+    <script>
+      const textInput = document.getElementById("text_input");
+      const countSpan = document.getElementById("count");
+      textInput.addEventListener("input", function () {
+        const text = textInput.value;
+        const count = text.length;
+        countSpan.textContent = count;
+      });
+    </script>
+  </body>
+</html>
