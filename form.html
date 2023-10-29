@@ -99,7 +99,7 @@
         let success = true;
         if (usernameVal === "") {
           success = false;
-          setError(username, "Uname required");
+          setError(username, "Username required");
         } else {
           setSuccess(username);
         }
@@ -109,7 +109,7 @@
           setError(email, "Email required");
         } else if (!ValidateEmail(emailVal)) {
           success = false;
-          setError(email, "Email emnter");
+          setError(email, "Email enter");
         } else {
           setSuccess(email);
         }
@@ -118,15 +118,15 @@
           setError(password, "Password required");
         } else if (passwordVal.length < 8) {
           success = false;
-          setError(password, "8 char emnter");
+          setError(password, "8 character enter");
         } else {
           setSuccess(password);
         }
         if (cpasswordVal === "") {
           success = false;
-          setError(cpassword, "cpwd required");
+          setError(cpassword, "conformpassword required");
         } else if (cpasswordVal !== passwordVal) {
-          setError(cpassword, "Cpwd hould same emnter");
+          setError(cpassword, "conformpassword should be same");
         } else {
           setSuccess(cpassword);
         }
