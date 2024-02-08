@@ -1,0 +1,264 @@
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  background-color: #f4f4f4;
+}
+
+/* header {
+  background-color: #ebe2e2;
+  color: black;
+  text-align: right;
+  padding: 1.2rem;
+  top: 5px;
+}
+header .search {
+  text-align: left;
+  /* color: aqua; 
+}
+header a {
+  /* color: white; 
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+nav {
+  background-color: #555;
+  color: white;
+  padding: 0.5em;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1em;
+} */
+header {
+  background-color: #d8d0d0;
+  color: black;
+  padding: 0.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  /* background-color: #555; */
+  color: black;
+  padding: 0.5em;
+  text-align: right;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+}
+
+header nav a {
+  color: black;
+  text-decoration: none;
+  margin: 0 0.3rem;
+  /* font-weight: bold; */
+  /* display: flex;
+  align-items: center; */
+}
+.search-icon {
+  width: 25px;
+  height: 30px;
+}
+.login-icon {
+  /* display: flex;
+  align-items: center; */
+  stroke-width: 0.3px;
+}
+.cart-icon {
+  width: 25px;
+  height: 30px;
+}
+.login {
+  margin-right: 100px;
+  display: flex;
+  align-items: center;
+}
+.cart {
+  margin-right: 250px;
+  display: flex;
+  align-items: center;
+}
+h3 {
+  display: flex;
+  align-items: center;
+  font-weight: lighter;
+  margin-left: 250px;
+}
+#main-nav {
+  background-color: #3f3939;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-nav h1 {
+  margin-left: 200px;
+  /* font-family: "Rowdies", sans-serif; */
+  font-size: 30px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+.C5 {
+  margin-right: 200px;
+}
+.C4 {
+  /* margin-right: 1px; */
+}
+.C1 {
+  margin-left: 250px;
+}
+.shipping {
+  background-color: rgb(204, 199, 199);
+  text-align: center;
+  font-size: 17px;
+  font-weight: 10;
+  padding: 10px;
+  margin-top: -5px;
+  font-family: "Crimson Text", serif;
+}
+#dresses {
+  background-color: white;
+  padding: 10px;
+  margin-top: -15px;
+}
+#dresses .P1 {
+  font-family: "Crimson Text", serif;
+  font-family: "Frank Ruhl Libre", serif;
+  text-align: center;
+  color: #3f3939;
+  font-size: 40px;
+  font-weight: bolder;
+  letter-spacing: 10px;
+}
+#dresses svg {
+  margin-top: -70px;
+  margin-left: 645px;
+}
+#dresses .P2 {
+  font-family: "Crimson Text", serif;
+  font-family: "Frank Ruhl Libre", serif;
+  text-align: center;
+  color: #3f3939;
+  font-size: 20px;
+  margin-top: -30px;
+  letter-spacing: 7px;
+}
+#price {
+  background-color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: -70px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  /* display: block; */
+}
+/* figure { 
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+figure:hover {
+  transform: scale(1.1);
+} */
+.medi {
+  margin: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+.medi:hover {
+  transform: scale(0.9);
+}
+
+.bag {
+  margin: 10px;
+  margin-top: -205px;
+}
+.sunglasses {
+  margin-top: -5px;
+  transition: transform 0.3s ease-in-out;
+  /* margin-top: -60px; */
+}
+.sunglasses:hover {
+  transform: scale(0.9);
+}
+.caption-midi,
+.caption-glass {
+  margin-top: -10px;
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+.caption-midi {
+  width: 81%;
+  margin-left: 10px;
+  margin-top: -20px;
+  padding-top: 30px;
+}
+.sales {
+  margin-top: -380px;
+  margin-left: 86px;
+  font-size: 55px;
+  color: #3f3939;
+  font-family: "Crimson Text", serif;
+  font-family: "Frank Ruhl Libre", serif;
+  letter-spacing: 10px;
+  font-weight: lighter;
+}
+/* footer {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+} */
+
+.email {
+  background-color: #333;
+  text-align: center;
+  padding: 10px 70px;
+  border: 1px solid #3f3939;
+  /* margin-top: -30px; */
+  margin-bottom: 10px;
+}
+button {
+  padding: 10px 90px;
+}
+.number {
+  margin-top: -10px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  text-align: center;
+}
+.copyrights {
+  text-align: center;
+  padding: 30px 0px;
+}
+footer {
+  background-color: grey;
+  color: white;
+  padding: 40px;
+}
