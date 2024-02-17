@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge5</title>
+  </head>
+  <body>
+    <script>
+      const getScores = (teamName) => {
+        const scores = [];
+        for (let i = 1; i <= 3; i++) {
+          const score = parseFloat(
+            prompt(`Enter the ${i} score of ${teamName}:`)
+          );
+          scores.push(score);
+        }
+        return scores;
+      };
+      const dolphinsScores = getScores("Dolphins");
+      const koalasScores = getScores("Koalas");
+
+      const calAverage = (scores) =>
+        scores.reduce((sum, score) => sum + score, 0) / scores.length;
+      const avgDolphins = calAverage(dolphinsScores);
+      const avgKoalas = calAverage(koalasScores);
+      console.log(avgDolphins);
+      console.log(avgKoalas);
+
+      function checkWinner(avgDolphins, avgKoalas) {
+        if (avgDolphins >= 2 * avgKoalas) {
+          console.log("Dolphin Team is the Winner");
+        } else if (avgKoalas >= 2 * avgDolphins) {
+          console.log("Koala Team is the Winner");
+        } else {
+          console.log("No Team is Winner");
+        }
+      }
+      checkWinner(avgDolphins, avgKoalas);
+    </script>
+  </body>
+</html>
