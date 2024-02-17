@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge12</title>
+  </head>
+  <body>
+    <script>
+      const game = {
+        team1: "Bayern Munich",
+        team2: "Borrussia Dortmund",
+        players1: [
+          "Neuer",
+          "Pavard",
+          "Martinez",
+          "Alaba",
+          "Davies",
+          "Kimmich",
+          "Goretzka",
+          "Coman",
+          "Muller",
+          "Gnarby",
+          "Lewandowski",
+        ],
+        players2: [
+          "Burki",
+          "Schulz",
+          "Hummels",
+          "Akanji",
+          "Hakimi",
+          "Weigl",
+          "Witsel",
+          "Hazard",
+          "Brandt",
+          "Sancho",
+          "Gotze",
+        ],
+        score: "4:0",
+        scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+        date: "Nov 9th, 2037",
+        odds: {
+          team1: 1.33,
+          x: 3.25,
+          team2: 6.5,
+        },
+      };
+      const players01 = game.players1;
+      const players02 = game.players2;
+      const [gk, ...fieldPlayers] = players01;
+      const allPlayers = [...players01, ...players02];
+      const players1Final = [...players01, "Thiago", "Coutinho", "Perisic"];
+      const { team1, x, team2 } = game.odds;
+      function printGoals(...playerNames) {
+        const totalGoals = playerNames.length;
+        console.log(
+          `${playerNames.join(", ")} Scored a total of ${totalGoals} goals.`
+        );
+      }
+      printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
+      printGoals(...game.scored);
+      for (const [index, player] of game.scored.entries()) {
+        console.log(`Goals ${index}:${player}`);
+      }
+      let totalOdds = 0;
+      for (const odds of Object.values(game.odds)) {
+        totalOdds += odds;
+      }
+      const averageOdds = totalOdds / Object.values(game.odds).length;
+      console.log(`Average Odds: ${averageOdds}`);
+      console.log(`Odd of Victory ${game.team1}:${team1}`);
+      console.log(`Odd of Draw:${x} `);
+      console.log(`Odd of Victory ${game.team2}:${team2} `);
+      const scorers = {};
+      for (const player of game.scored) {
+        scorers[player] = (scorers[player] || 0) + 1;
+      }
+      console.log(scorers);
+      console.log(
+        (team1 < team2 && "Bayern Munich is more likely to win") ||
+          "Borrussia Dortmund is more likely to win"
+      );
+    </script>
+  </body>
+</html>

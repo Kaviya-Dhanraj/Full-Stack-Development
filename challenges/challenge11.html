@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 11</title>
+  </head>
+  <body>
+    <script>
+      const game = {
+        team1: "Bayern Munich",
+        team2: "Borrussia Dortmund",
+        players1: [
+          "Neuer",
+          "Pavard",
+          "Martinez",
+          "Alaba",
+          "Davies",
+          "Kimmich",
+          "Goretzka",
+          "Coman",
+          "Muller",
+          "Gnarby",
+          "Lewandowski",
+        ],
+        players2: [
+          "Burki",
+          "Schulz",
+          "Hummels",
+          "Akanji",
+          "Hakimi",
+          "Weigl",
+          "Witsel",
+          "Hazard",
+          "Brandt",
+          "Sancho",
+          "Gotze",
+        ],
+        score: "4:0",
+        scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+        date: "Nov 9th, 2037",
+        odds: {
+          team1: 1.33,
+          x: 3.25,
+          team2: 6.5,
+        },
+      };
+      const players01 = game.players1;
+      const players02 = game.players2;
+      // console.log(players01, players02);
+      const [gk, ...fieldPlayers] = players01;
+      // console.log(gk, fieldPlayers);
+      const allPlayers = [...players01, ...players02];
+      // console.log(allPlayers);
+      const players1Final = [...players01, "Thiago", "Coutinho", "Perisic"];
+      // console.log(players1Final);
+      const { team1, x: draw, team2 } = game.odds;
+      function printGoals(...playerNames) {
+        const totalGoals = playerNames.length;
+        console.log(
+          `${playerNames.join(", ")} Scored a total of ${totalGoals} goals.`
+        );
+      }
+      printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
+      printGoals(...game.scored);
+      console.log(
+        (team1 < team2 && "Bayern Munich is more likely to win") ||
+          "Borrussia Dortmund  is more likely to win"
+      );
+    </script>
+  </body>
+</html>
