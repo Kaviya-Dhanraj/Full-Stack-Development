@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>challenge17</title>
+  </head>
+  <body>
+    <script>
+      function checkDogs(dogsJulia, dogsKate) {
+        const dogsJuliaCopy = dogsJulia.slice(1, -2);
+        const allDogsnotcats = [...dogsJuliaCopy, ...dogsKate];
+        allDogsnotcats.forEach((age, index) => {
+          const find = age >= 3 ? "adult" : "puppy";
+          console.log(
+            `Dog number ${index + 1} is an ${find}, and is ${age} years old`
+          );
+        });
+      }
+      const dogsJuliaData1 = [3, 5, 2, 12, 7];
+      const dogsKateData1 = [4, 1, 15, 8, 3];
+      console.log("First Test Data:");
+      checkDogs(dogsJuliaData1, dogsKateData1);
+      const dogsJuliaData2 = [9, 16, 6, 8, 3];
+      const dogsKateData2 = [10, 5, 6, 1, 4];
+      console.log("Second Test Data:");
+      checkDogs(dogsJuliaData2, dogsKateData2);
+    </script>
+  </body>
+</html>
