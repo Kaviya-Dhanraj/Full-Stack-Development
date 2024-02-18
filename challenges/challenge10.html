@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #222;
+        color: white;
+        text-align: center;
+        margin: 0;
+      }
+
+      #score {
+        margin-top: 50px;
+        margin-left: -30px;
+        /* display: inline-block; */
+        /* align-self: flex-start; */
+        display: inline-block;
+      }
+
+      input {
+        /* padding: 10px; */
+        font-size: 16px;
+      }
+      .again {
+        margin-top: 30px;
+        margin-left: -30px;
+      }
+    </style>
+    <title>Challenge10</title>
+  </head>
+  <body>
+    <h1>Number Guessing</h1>
+    <p>Between 1 and 20</p>
+    <input type="number" id="guess" />
+    <button onclick="checkGuess()">Check!</button>
+    <p id="message"></p>
+    <div id="score-container">
+      <p id="score">Score: <span id="score-value">0</span></p>
+    </div>
+    <button class="again">Play Again</button>
+    <script>
+      let score = 0;
+      let secretNumber = Math.floor(Math.random() * 20) + 1;
+      function checkGuess() {
+        const guess = document.getElementById("guess").value;
+        const message = document.getElementById("message");
+        const scoreValue = document.getElementById("score-value");
+
+        if (!guess || isNaN(guess) || guess < 1 || guess > 20) {
+          message.textContent = "Please enter a valid number between 1 and 20.";
+        } else {
+          guessNumber = parseInt(guess);
+
+          if (guessNumber === secretNumber) {
+            message.textContent =
+              "Congratulations! You guessed the correct number!";
+            score++;
+            scoreValue.textContent = score;
+          } else {
+            message.textContent =
+              guessNumber > secretNumber
+                ? "Too high! Try again."
+                : "Too low! Try again.";
+          }
+        }
+      }
+      document.querySelector(".again").addEventListener("click", function () {
+        score = 0;
+        secretNumber = Math.floor(Math.random() * 20) + 1;
+        document.getElementById("message").textContent = "";
+        document.getElementById("guess").value = "";
+        document.getElementById("score-value").textContent = score;
+        document.body.style.backgroundColor = "#222";
+        document.getElementById("score").style.width = "15rem";
+      });
+    </script>
+  </body>
+</html>
