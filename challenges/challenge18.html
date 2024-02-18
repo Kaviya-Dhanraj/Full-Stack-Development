@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>challenge18</title>
+  </head>
+  <body>
+    <script>
+      function calcAverageHumanAge(ages) {
+        const humanAges = ages.map((dogAge) =>
+          dogAge <= 2 ? 2 * dogAge : 16 + dogAge * 4
+        );
+        const adultsOnly = humanAges.filter((humanAge) => humanAge >= 18);
+        const averageAge =
+          adultsOnly.reduce((acc, age) => acc + age, 0) / adultsOnly.length;
+        console.log(`Dog ages in human years: ${humanAges}`);
+        console.log(`Adult dogs ages: ${adultsOnly}`);
+        console.log(`Average human age of adult dogs: ${averageAge}`);
+      }
+      const testData1 = [5, 2, 4, 1, 15, 8, 3];
+      console.log("First Test Data:");
+      calcAverageHumanAge(testData1);
+      console.log("\n");
+      const testData2 = [16, 6, 10, 5, 6, 1, 4];
+      console.log("Second Test Data:");
+      calcAverageHumanAge(testData2);
+    </script>
+  </body>
+</html>
