@@ -1,0 +1,296 @@
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  background-color: white;
+  overflow-x: hidden;
+}
+/* header styling */
+header {
+  background-color: #d8d0d0;
+  color: black;
+  padding: 0.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  z-index: 1001;
+  position: fixed;
+  width: 100%;
+}
+.search-icon {
+  margin-left: -160px;
+  width: 25px;
+  height: 30px;
+}
+/* .login,
+.cart {
+  margin-left: -1000px;
+} */
+header a {
+  color: black;
+  padding: 0.5em;
+  text-align: right;
+  font-size: 17px;
+  display: flex;
+  float: right;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+
+.login-icon {
+  stroke-width: 0.3px;
+}
+.cart-icon {
+  width: 25px;
+  height: 30px;
+}
+.login {
+  margin-left: -1000px;
+  margin-right: 250px;
+  display: flex;
+  align-items: center;
+}
+.cart {
+  margin-left: -1000px;
+  margin-right: 100px;
+  display: flex;
+  align-items: center;
+}
+h3 {
+  display: flex;
+  align-items: center;
+  font-weight: lighter;
+  margin-left: 250px;
+}
+#main-nav {
+  background-color: #3f3939;
+  color: white;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  /* overflow: hidden; */
+  width: 100%;
+  z-index: 1001;
+  margin-top: 60px;
+}
+#main-nav h1 {
+  margin-left: 200px;
+  /* font-family: "Rowdies", sans-serif; */
+  font-size: 30px;
+}
+#main-nav a {
+  font-size: 17px;
+  text-decoration: none;
+  color: white;
+}
+.C5 {
+  margin-right: 200px;
+}
+/* .C4 {
+   margin-right: 1px; 
+ }   */
+.C1 {
+  margin-left: 250px;
+}
+.image {
+  margin-top: 150px;
+  max-width: 100%;
+}
+/* #main-nav a:hover {
+  background-color: #ddd;
+  color: black;
+} */
+
+/* #main-nav a.active {
+  background-color: #4caf50;
+  color: white;
+} */
+.shipping {
+  background-color: rgb(204, 199, 199);
+  text-align: center;
+  font-size: 17px;
+  font-weight: 10;
+  padding: 10px;
+  margin-top: -5px;
+  font-family: "Crimson Text", serif;
+}
+#dresses {
+  background-color: white;
+  padding: 10px;
+  margin-top: -15px;
+}
+#dresses .P1 {
+  font-family: "Crimson Text", serif;
+  font-family: "Frank Ruhl Libre", serif;
+  text-align: center;
+  color: #3f3939;
+  font-size: 40px;
+  font-weight: bolder;
+  letter-spacing: 10px;
+}
+#dresses svg {
+  margin-top: -40px;
+  margin-left: 635px;
+}
+#dresses .P2 {
+  font-family: "Crimson Text", serif;
+  font-family: "Frank Ruhl Libre", serif;
+  text-align: center;
+  color: #3f3939;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  letter-spacing: 7px;
+}
+@media screen and (max-width: 768px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #main-nav h1 {
+    margin: 10px;
+  }
+  #main-nav a {
+    margin: 10px;
+  }
+}
+#price {
+  background-color: white;
+  /* margin: 10px; */
+  margin: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* margin-top: 70px; */
+  z-index: 1000;
+  /* padding: -500px; */
+  /* border: 5px solid black; */
+  position: relative;
+  overflow: hidden;
+}
+
+/* .zooming-images {
+  position: relative;
+  overflow: hidden;
+} */
+img {
+  max-width: 100%;
+  max-height: 100%;
+  /* display: block; */
+}
+/* figure { 
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+figure:hover {
+  transform: scale(1.1);
+} */
+.medi {
+  margin: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+  /* position: relative; */
+  transition: transform 0.3s ease-in-out;
+}
+.medi:hover {
+  transform: scale(0.9);
+}
+
+.bag {
+  margin: 10px;
+  margin-top: -205px;
+}
+.sunglasses {
+  margin-top: -5px;
+  transition: transform 0.3s ease-in-out;
+  /* margin-top: -60px; */
+}
+.sunglasses:hover {
+  transform: scale(0.9);
+}
+.caption-midi,
+.caption-glass {
+  margin-top: -10px;
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+.caption-midi {
+  width: 81%;
+  margin-left: 10px;
+  margin-top: -20px;
+  padding-top: 30px;
+}
+.sales {
+  margin-top: -380px;
+  margin-left: 86px;
+  font-size: 55px;
+  color: #3f3939;
+  font-family: "Crimson Text", serif;
+  font-family: "Frank Ruhl Libre", serif;
+  letter-spacing: 10px;
+  font-weight: lighter;
+}
+.container {
+  background-color: rgb(183, 231, 231);
+  margin-top: -20px;
+  height: 100vh;
+  margin: 30px;
+  border: 2px solid black;
+  text-align: center;
+}
+.line01 {
+  margin-top: 250px;
+  font-size: 60px;
+  /* font-weight: 900; */
+  font-family: "Poppins", sans-serif;
+  font-family: "Protest Strike", sans-serif;
+}
+/* footer {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+} */
+
+.email {
+  background-color: #333;
+  text-align: center;
+  padding: 10px 70px;
+  border: 1px solid #3f3939;
+  /* margin-top: -30px; */
+  margin-bottom: 10px;
+}
+button {
+  padding: 10px 90px;
+}
+.number {
+  margin-top: -10px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  text-align: center;
+}
+.copyrights {
+  text-align: center;
+  padding: 30px 0px;
+}
+footer {
+  background-color: grey;
+  color: white;
+  padding: 40px;
+}
